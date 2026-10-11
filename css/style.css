@@ -26,3 +26,15 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);outline-off
 .inv{background:#fff;color:#111;padding:24px;border:1px solid var(--bd);max-width:720px}.foot{text-align:center;color:var(--mut);padding:24px}
 @media print{.top,.foot,.noprint,#toast{display:none!important}body{background:#fff}.card{border:0;box-shadow:none}}
 @media(max-width:600px){main{padding:10px}h1{font-size:24px}}
+
+/* ===== Tahap 2: sidebar back-office, tab, modal, grafik batang ===== */
+.staff .top{position:fixed;left:0;top:0;bottom:0;width:232px;flex-direction:column;align-items:stretch;flex-wrap:nowrap;padding:16px 12px;z-index:20}
+.staff #nav{flex-direction:column;overflow-y:auto;flex:1}.staff #nav a{padding:10px 12px}
+.staff main{margin:0 0 0 232px;max-width:none}.staff .foot{margin-left:232px}
+@media(max-width:800px){.staff .top{position:sticky;width:auto;bottom:auto;flex-direction:row;flex-wrap:wrap}.staff #nav{flex-direction:row}.staff main,.staff .foot{margin-left:0}}
+.tabs{display:flex;gap:4px;overflow-x:auto;margin-bottom:12px}.tabs button{border:0;background:transparent;border-bottom:3px solid transparent;border-radius:0;white-space:nowrap}
+.tabs button.on{border-color:var(--acc);font-weight:700;color:var(--acc)}.cnt{background:var(--bd);border-radius:9999px;padding:1px 8px;font-size:11px;margin-left:6px}
+#mdl .mb{position:fixed;inset:0;background:#0009;display:flex;align-items:center;justify-content:center;z-index:50;padding:12px}
+#mdl .mc{background:var(--sf);color:var(--ink);border-radius:12px;max-width:780px;width:100%;max-height:92vh;overflow:auto;padding:16px;box-shadow:0 10px 25px -5px #1e2a441f}
+.bar{display:flex;align-items:center;gap:8px;margin:6px 0}.bar span{min-width:96px;font-size:12px;color:var(--mut)}.bar i{display:block;height:14px;background:var(--pri);border-radius:4px;min-width:2px;transition:width .3s}
+.usp{margin-bottom:16px}

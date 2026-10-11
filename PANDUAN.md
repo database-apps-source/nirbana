@@ -29,3 +29,9 @@ git push -u origin main
 - **WhatsApp:** menu WhatsApp → isi token Fonnte → centang aktif → Simpan. Trigger 1 menit sudah dipasang saat setup.
 - **Template dokumen:** buat Google Docs dengan `{{NOMOR}} {{NAMA_CUSTOMER}} {{RINCIAN}} {{TOTAL}} {{SISA}}` → menu Template Dok → Pindai → simpan dengan kode `INVOICE`.
 - **Migrasi:** menu Migrasi → tempel URL spreadsheet lama → Pindai (dry-run) → Jalankan Import. Ulangi sebelum cutover (delta).
+
+## E. Pembaruan Tahap 2 (proofing, unggah, master data, laporan)
+- **Instalasi baru:** cukup `setupAppEnvironment()` — semua sheet baru ikut terbuat.
+- **Sudah terpasang sebelumnya:** jalankan `migrasiSkema()` SEKALI di editor (menambah sheet Proofing, Files, Inventory, Supplier, Pengeluaran + data contoh), lalu **Deploy → Manage deployments → ✏️ Edit → New version**.
+- Akun demo: `karyawan@ncp.local` dan `graha@contoh.id` (customer), sandi `Demo#1234`. **Nonaktifkan lewat Master Data → Pengguna sebelum dipakai sungguhan.**
+- Frontend: salin juga `js/modul.js` dan `css/style.css` terbaru, lalu `git add .` → `git commit -m "tahap 2"` → `git push`.
